@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url("world.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1{
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    width: fit-content;
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    perspective: 1000px;
+}
+
+/*STYLING OF CARD FACE*/
+
+.card{
+    height: 120px;
+    width: 120px;
+    position: relative;
+    transition: all 1.2s ease;
+    transform-style: preserve-3d;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: bolder;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+
+.front{
+    background: linear-gradient(teal, lightslategray);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back{
+    background: linear-gradient(darkslategray, cornflowerblue);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
