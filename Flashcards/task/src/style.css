@@ -13,7 +13,9 @@ body{
 
 h1{
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    padding-bottom: 1.5rem;
+    color: black;
 }
 
 main{
@@ -27,7 +29,6 @@ main{
 .container{
     width: fit-content;
     height: fit-content;
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
@@ -42,6 +43,7 @@ main{
     position: relative;
     transition: all 1.2s ease;
     transform-style: preserve-3d;
+    padding-bottom: 2rem;
 }
 .card:hover{
     transform: rotateY(180deg);
